@@ -19,7 +19,7 @@
                     <!-- 昵称 -->
                     <div class="form-group">
                         <label for="username">昵称</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <input type="text" class="form-control" id="username" name="username" required value="{{ user.username }}">
                     </div>
                     <!-- 邮箱 -->
                     <div class="form-group">
@@ -29,12 +29,12 @@
                     <!-- 密码 -->
                     <div class="form-group">
                         <label for="password">设置密码</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <input type="password" class="form-control" id="password" name="password" required value="{{ user.password }}">
                     </div>
                     <!-- 确认密码 -->
                     <div class="form-group">
                         <label for="password2">确认密码</label>
-                        <input type="password" class="form-control" id="password2" name="password2" required>
+                        <input type="password" class="form-control" id="password2" name="password2" required value="{{ user.password2 }}">
                     </div>
                     <!-- 提交按钮 -->
                     <button type="submit" class="btn btn-primary btn-block">提交</button>

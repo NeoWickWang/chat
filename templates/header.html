@@ -3,7 +3,7 @@
 <!-- <div class="container"> -->
 <!--  -->
 <!-- 导航栏商标 -->
-<!-- <a class="navbar-brand" href="{% url 'chat:index' %}">我的聊天室</a> -->
+<!-- <a class="navbar-brand" href="{% url 'chat:main' %}">我的聊天室</a> -->
 <!--  -->
 <!-- 导航入口 -->
 <!-- <div> -->
@@ -67,7 +67,7 @@
 
       <!-- <div class="col-md-auto mb-2 mb-md-0 "> -->
       <!-- <div class="row-md-3"> -->
-      <a href="{% url 'chat:index' %}" class="d-inline-flex link-body-emphasis text-decoration-none"
+      <a href="{% url 'chat:main' %}" class="d-inline-flex link-body-emphasis text-decoration-none"
         style="font-size: 30px; ">
         <!-- <svg t="1698284101698" class="icon" viewBox="0 0 1365 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
           p-id="4705" width="40" height="40">
@@ -102,18 +102,18 @@
     </div>
 
     <div class="col-md-3 text-end" style="text-align:right">
-      <button type="button" class="btn btn-outline-primary me-2 text-end" onclick="redirectToUpload()">搜索好友</button>
-      <button type="button" class="btn btn-primary text-end" onclick="redirectToCreateFolder()">搜索群聊</button>
+      <button type="button" class="btn btn-outline-primary me-2 text-end" onclick="redirectToFriend()">搜索好友</button>
+      <button type="button" class="btn btn-primary text-end" onclick="redirectToRoom()">搜索群聊</button>
     </div>
   </header>
 </div>
 
 <script>
-  function redirectToUpload() {
+  function redirectToFriend() {
     window.location.href = "{% url 'chat:login' %}";
   }
 
-  function redirectToCreateFolder() {
-    window.location.href = "{% url 'chat:logout' %}";
+  function redirectToRoom() {
+    window.location.href = "{% url 'chat:select-room' %}";
   }  
 </script>
