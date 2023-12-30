@@ -1,0 +1,150 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+  <style>
+    
+    body{min-height:100vh;min-height:-webkit-fill-available}
+    html{height:-webkit-fill-available}
+    main{display:flex;
+      flex-wrap:nowrap;
+      height:100vh;
+      height:-webkit-fill-available;
+      max-height:100vh;
+      overflow-x:auto;overflow-y:hidden}
+      .bi{vertical-align:-.125em;pointer-events:none;fill:currentColor}.dropdown-toggle{outline:0}.nav-flush .nav-link{border-radius:0}.btn-toggle{display:inline-flex;align-items:center;padding:.25rem .5rem;font-weight:600;color:rgba(0,0,0,.65);background-color:transparent;border:0}.btn-toggle:hover,.btn-toggle:focus{color:rgba(0,0,0,.85);background-color:#d2f4ea}.btn-toggle::before{width:1.25em;line-height:0;content:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");transition:transform .35s ease;transform-origin:.5em 50%}.btn-toggle[aria-expanded="true"]{color:rgba(0,0,0,.85)}.btn-toggle[aria-expanded="true"]::before{transform:rotate(90deg)}.btn-toggle-nav a{display:inline-flex;padding:.1875rem .5rem;margin-top:.125rem;margin-left:1.25rem;text-decoration:none}.btn-toggle-nav a:hover,.btn-toggle-nav a:focus{background-color:#d2f4ea}.scrollarea{overflow-y:auto}.fw-semibold{font-weight:600}.lh-tight{line-height:1.25}.bd-placeholder-img{font-size:1.125rem;text-anchor:middle;-webkit-user-select:none;-moz-user-select:none;user-select:none}@media (min-width:768px){.bd-placeholder-img-lg{font-size:3.5rem}}
+    body {
+          font-family: Arial;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        .registration-button {
+    display: block;
+    background-color: #ffffff; /* 按钮背景颜色 */
+    color: #000000; /* 文本颜色 */
+    padding: 10px 20px; /* 内边距 */
+    text-decoration: none; /* 去掉链接下划线 */
+    border-radius: 5px; /* 圆角边框 */
+    }
+    .d-flex {
+    flex-direction: row;
+}
+.registration-button:hover {
+    background-color: rgba(0,0,0,.15); /* 鼠标悬停时的背景颜色 */
+}
+  /* 默认链接样式 */
+  .nav-link {
+    background-color: white; /* 默认背景颜色 */
+    color: #000000; /* 默认文本颜色 */
+    transition: background-color 0.3s; /* 平滑过渡 */
+  }
+
+  /* 鼠标悬停时的链接样式 */
+  .nav-link:hover {
+    background-color: #007bff; /* 悬停时的背景颜色 */
+    color: #ffffff; /* 悬停时的文本颜色 */
+  }
+  
+</style>
+</head>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="bootstrap" viewBox="0 0 118 94">
+    <title>Bootstrap</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+  </symbol>
+  <symbol id="home" viewBox="0 0 16 16">
+    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+  </symbol>
+  <symbol id="speedometer2" viewBox="0 0 16 16">
+    <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+    <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+  </symbol>
+  <symbol id="table" viewBox="0 0 16 16">
+    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+  </symbol>
+  <symbol id="people-circle" viewBox="0 0 16 16">
+    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+  </symbol>
+  <symbol id="grid" viewBox="0 0 16 16">
+    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+  </symbol>
+</svg>
+<main>
+  <div class="d-flex flex-column flex-shrink-0 p-3 bg-white" style="width: 280px; height: 80vh;">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="{% url 'chat:index' %}" class="nav-link link-dark" aria-current="page">
+          <!-- <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg> -->
+          <svg class="svg-icon" width="16" height="16"  class="bi me-2" viewBox="0 0 20 20">
+            <path d="M14.999,8.543c0,0.229-0.188,0.417-0.416,0.417H5.417C5.187,8.959,5,8.772,5,8.543s0.188-0.417,0.417-0.417h9.167C14.812,8.126,14.999,8.314,14.999,8.543 M12.037,10.213H5.417C5.187,10.213,5,10.4,5,10.63c0,0.229,0.188,0.416,0.417,0.416h6.621c0.229,0,0.416-0.188,0.416-0.416C12.453,10.4,12.266,10.213,12.037,10.213 M14.583,6.046H5.417C5.187,6.046,5,6.233,5,6.463c0,0.229,0.188,0.417,0.417,0.417h9.167c0.229,0,0.416-0.188,0.416-0.417C14.999,6.233,14.812,6.046,14.583,6.046 M17.916,3.542v10c0,0.229-0.188,0.417-0.417,0.417H9.373l-2.829,2.796c-0.117,0.116-0.71,0.297-0.71-0.296v-2.5H2.5c-0.229,0-0.417-0.188-0.417-0.417v-10c0-0.229,0.188-0.417,0.417-0.417h15C17.729,3.126,17.916,3.313,17.916,3.542 M17.083,3.959H2.917v9.167H6.25c0.229,0,0.417,0.187,0.417,0.416v1.919l2.242-2.215c0.079-0.077,0.184-0.12,0.294-0.12h7.881V3.959z"></path>
+          </svg>
+          通讯录
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'chat:login'%}" class="nav-link link-body-emphasis">
+          <!-- <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#speedometer2" />
+          </svg> -->
+          <svg class="svg-icon" width="16" height="16"  class="bi me-2" viewBox="0 0 20 20">
+            <path d="M15.573,11.624c0.568-0.478,0.947-1.219,0.947-2.019c0-1.37-1.108-2.569-2.371-2.569s-2.371,1.2-2.371,2.569c0,0.8,0.379,1.542,0.946,2.019c-0.253,0.089-0.496,0.2-0.728,0.332c-0.743-0.898-1.745-1.573-2.891-1.911c0.877-0.61,1.486-1.666,1.486-2.812c0-1.79-1.479-3.359-3.162-3.359S4.269,5.443,4.269,7.233c0,1.146,0.608,2.202,1.486,2.812c-2.454,0.725-4.252,2.998-4.252,5.685c0,0.218,0.178,0.396,0.395,0.396h16.203c0.218,0,0.396-0.178,0.396-0.396C18.497,13.831,17.273,12.216,15.573,11.624 M12.568,9.605c0-0.822,0.689-1.779,1.581-1.779s1.58,0.957,1.58,1.779s-0.688,1.779-1.58,1.779S12.568,10.427,12.568,9.605 M5.06,7.233c0-1.213,1.014-2.569,2.371-2.569c1.358,0,2.371,1.355,2.371,2.569S8.789,9.802,7.431,9.802C6.073,9.802,5.06,8.447,5.06,7.233 M2.309,15.335c0.202-2.649,2.423-4.742,5.122-4.742s4.921,2.093,5.122,4.742H2.309z M13.346,15.335c-0.067-0.997-0.382-1.928-0.882-2.732c0.502-0.271,1.075-0.429,1.686-0.429c1.828,0,3.338,1.385,3.535,3.161H13.346z"></path>
+          </svg>
+           群组
+        </a>
+      </li>
+{#      <li>#}
+{#        <a href="#" class="nav-link link-dark">#}
+{#          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>#}
+{#          Orders#}
+{#        </a>#}
+{#      </li>#}
+{#      <li>#}
+{#        <a href="#" class="nav-link link-dark">#}
+{#          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>#}
+{#          Products#}
+{#        </a>#}
+{#      </li>#}
+{#      <li>#}
+{#        <a href="#" class="nav-link link-dark">#}
+{#          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>#}
+{#          Customers#}
+{#        </a>#}
+{#      </li>#}
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+{#        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">#}
+          <svg t="1699063329172" class="icon  me-2"  viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1590" width="28" height="28"><path d="M406.766493 519.191123C402.472299 519.191123 398.112041 518.365316 393.916945 516.581574 294.159525 474.432413 229.71359 377.185445 229.71359 268.872671 229.71359 120.623897 350.347396-0.00991 498.59617-0.00991 646.844945-0.00991 767.445719 120.623897 767.445719 268.872671 767.445719 373.849187 705.741461 469.873961 610.245203 513.509574 593.629977 521.073961 574.041848 513.806865 566.444428 497.224671 558.880041 480.609445 566.18017 461.021316 582.795396 453.456929 654.838751 420.523768 701.381203 348.050994 701.381203 268.872671 701.381203 157.025445 610.410364 66.054606 498.59617 66.054606 386.781977 66.054606 295.778106 157.025445 295.778106 268.872671 295.778106 350.594477 344.40159 423.92609 419.649074 455.736155 436.429461 462.83809 444.32417 482.228026 437.189203 499.041445 431.871009 511.626735 419.649074 519.191123 406.766493 519.191123" fill="#231814" p-id="1591"></path><path d="M673.71999 996.54689 673.686957 996.54689 103.087732 996.018374C67.148635 995.95231 34.413667 978.147923 15.519215 948.385858-2.714591 919.680826-4.960785 884.171148 9.44128 853.385084 59.485151 746.525729 190.623215 566.532955 506.708893 561.644181 831.614183 555.698374 949.803603 748.474632 991.325151 863.327794 1002.225796 893.486245 997.832506 925.989987 979.202312 952.547923 959.878441 980.096826 927.936248 996.54689 893.780893 996.54689L811.365409 996.54689C793.131603 996.54689 778.333151 981.781471 778.333151 963.514632 778.333151 945.247794 793.131603 930.482374 811.365409 930.482374L893.780893 930.482374C906.432248 930.482374 918.125667 924.536568 925.128506 914.62689 928.69599 909.50689 933.981151 899.002632 929.191474 885.756697 885.787086 765.750503 776.351215 623.282374 507.765925 627.708697 241.59199 631.837729 122.411603 767.930632 69.295732 881.396439 64.406957 891.768568 65.166699 903.296826 71.310699 912.975277 78.04928 923.578632 89.973925 929.920826 103.186828 929.953858L673.753022 930.482374C691.986828 930.515406 706.752248 945.280826 706.752248 963.547665 706.752248 981.781471 691.953796 996.54689 673.71999 996.54689" fill="#231814" p-id="1592"></path></svg>
+        <strong>{{ user.username }}</strong>
+      </a>
+      <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+{#        <li><a class="dropdown-item" href="#">New project...</a></li>#}
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="{% url 'chat:login' %}">Sign out</a></li>
+        <li><a class="dropdown-item" href="{% url 'chat:reset' %}">Change_password</a></li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+
+ <script>
+  /* global bootstrap: false */
+  (function () {
+    'use strict'
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+      new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  })()
+  </script>

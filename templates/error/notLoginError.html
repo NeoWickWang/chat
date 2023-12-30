@@ -1,0 +1,59 @@
+{% load static %}
+
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static 'bootstrap/css/bootstrap.css' %} >
+    <title>登录</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-4  text-center">
+                <!-- <img src="https://static.hdslb.com/error/very_sorry.png"> -->
+                <img src="{% static 'resource/dead_link.jpg' %}">
+            </div>
+    
+            <h1 class="col-12 mt-4 mb-4 alert alert-warning text-center display-5" style="font-size: 30px;">
+                {{ error_message }}</h1>
+            <!-- p-3 bg-danger text-white -->
+    
+    
+            <!-- <div style="text-align: center; padding: 0 0 40px 0;">
+                <a class="rollback-btn" style="padding: 0 20px; float: none;">返回上一页</a>
+            </div> -->
+    
+            <div class="col-12 text-center mt-4">
+                <!-- <a class="btn btn-primary" href="{% url 'chat:index' %}">返回上一页</a> -->
+                <input type="button" name="Submit" value="返回上一页" onclick="javascript:window.history.back(-1);"
+                    class="btn btn-info">
+            </div>
+    
+            <div class="error-split" id="up">
+            </div>
+    
+            <!-- <div class="error-manga"><img
+                    src="https://i0.hdslb.com/bfs/activity-plat/static/2cf2b9af5d3c5781d611d6e36f405144/XHhqvtddUA.png"><a
+                    class="change-img-btn" href="#up">换一张</a><a></a></div> -->
+    
+        </div>
+    </div>
+{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>#}
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>#}
+{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>#}
+{##}
+
+
+<script src="{% static 'jquery/jquery_3.4.1_jquery.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1-lts/dist/umd/popper.min.js"></script>
+{#        <!-- <script src="{% static 'popper/1.15.0_umd_popper.js' %}"></script> -->#}
+
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
+{% endblock content %}

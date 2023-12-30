@@ -16,9 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include
-from django.urls import path
+from django.urls import path, include
+from chat.views import index
+from chat.views import log_in, logon, logout, index
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('chat/', include('chat.urls')),
+
+    # path('room/',index,name='index'),
+    path('',log_in,name='login'),
+    path('login/',log_in,name='login'),
+    path('logon/',logon,name='logon'),
+    path('logout/', logout, name='logout'),
+
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

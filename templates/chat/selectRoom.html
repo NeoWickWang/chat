@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+首页
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-2">
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 mb-4" >
+                <div class="form-group">
+                    <div class="py-4 text-center align-self-center" style="font-size: 20px;">
+                        <strong>请输入群名</strong>
+                    </div>
+                    <input type="text" class="form-control mb-3" id="room-name-input" name="room-name-input" required>
+                    <button type="submit" class="btn btn-primary btn-block mb-3" id="room-name-submit" value="Enter">进入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('#room-name-input').focus();
+        document.querySelector('#room-name-input').onkeyup = function (e) {
+            if (e.keyCode === 13) {  // enter, return
+                document.querySelector('#room-name-submit').click();
+            }
+        };
+
+        document.querySelector('#room-name-submit').onclick = function (e) {
+            var roomName = document.querySelector('#room-name-input').value;
+            window.location.pathname = '/chat/' + roomName + '/';
+        };
+
+        // .text-large {
+        //     font-size: 20px;
+        // }
+    </script>
+
+</div>
+
+
+{% endblock content %}
